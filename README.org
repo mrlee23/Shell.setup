@@ -1,1 +1,17 @@
 #+TITLE: Shell.setup
+
+* on Bash
+
+** cd
+
+Changes directory and displays file lists of the changed directory.
+
+*** variables
+- =CD_LS_COUNT_LIMIT= (default: 100) : Maxium counts for display the file lists.
+
+** cdl
+
+Changes directory and displays all detail file lists of the changed directory.
+
+*** variables
+- =CD_LS_COUNT_LIMIT= (default: 50) : Maxium counts for display the file lists.

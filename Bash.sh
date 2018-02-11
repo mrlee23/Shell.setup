@@ -1,18 +1,20 @@
-export CD_COUNT_LIMIT=80
+export CD_LS_COUNT_LIMIT=100
 cd () {
 	bultin cd "$@"
-	COUNT=`ls -lh | wc -l`
-	if [ "$COUNT" -lt $CD_COUNT_LIMIT ]
+	COUNT=`ls | wc -l`
+	if [ "$COUNT" -lt $CD_LS_COUNT_LIMIT ]
 	then
 		ls
 	else
 		echo "Count: $COUNT";
 	fi
 }
+
+export CD_LL_COUNT_LIMIT=50
 cdl () {
 	builtin cd "$@"
 	COUNT=`ls -alh | wc -l`
-	if [ "$COUNT" -lt $CD_COUNT_LIMIT ]
+	if [ "$COUNT" -lt $CD_LL_COUNT_LIMIT ]
 	then
 		ls
 	else
